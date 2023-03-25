@@ -1,0 +1,105 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    flex-direction: column;
+}
+h2{
+    margin-top: 150px;
+    color: azure;
+    margin-bottom: 40px;
+}
+.container
+{
+    position: relative;
+    width:600px;
+    height:200px;
+    background: white;
+    border-bottom:3px solid red;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container label
+{
+    position:relative;
+    width:100%;
+    height:66.666%;
+    border:3px solid red;
+    border-bottom:none;
+}
+.container label input{
+    position:relative;
+    appearance: none; /* hides the check mark*/
+    z-index:10; 
+}
+.container label i
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-size: 600px;
+}
+.container label:nth-child(1) i{
+    background-image: url(images/01.jpg);
+    animation:animate 0.5s steps(3) infinite;
+}
+.container label:nth-child(2) i{
+    background-image: url(images/02.jpg);
+    animation:animate 0.9s steps(3) infinite;
+}
+.container label:nth-child(3) i{
+    background-image: url(images/03.jpg);
+    animation:animate 0.7s steps(3) infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position:0px;
+    }
+    100%
+    {
+        background-position: 600px;
+    }
+}
+.container label input:checked ~i
+{
+    animation-play-state: paused;
+}
+.reset
+{
+    margin-top:30px;
+    border:none;
+    font-size: medium;
+    padding: 13px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+}
+.reset:active
+{
+    background: red;
+    transform:scale(0.98);
+}
+h3{
+    margin-top: 70px;
+    color: azure;
+}
+h4{
+    margin-top: 10px;
+    color: azure;
+    margin-bottom: 20px;
+}

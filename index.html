@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Fun Game</h2>
+    <div class="container">
+        <label>
+            <input type="checkbox" class="box" id="ck1">
+            <i></i>
+        </label> 
+        <label>
+            <input type="checkbox" class="box" id="ck2">
+<i></i>
+        </label>
+        <label>
+            <input type="checkbox" class="box" id="ck3">
+            <i></i>
+        </label>
+    </div>
+    <button class="reset">Play Again!!</button>
+    <h3>
+        Guidelines to play
+    </h3><br>
+    <h4>
+        ->Tap each row to form a complete picture.
+        <br>
+        ->If you fail to form it use play again and try again.
+    </h4>
+    <script>
+        let ck1=document.querySelector('#ck1');
+let ck2=document.querySelector('#ck2');
+let ck3=document.querySelector('#ck3');
+let reset=document.querySelector('.reset');
+ck1.onclick=function() {
+    if(ck1.checked===true)
+{
+    ck1.disabled='true';
+}
+}
+ck2.onclick=function()
+{
+if(ck2.checked===true)
+{
+    ck2.disabled='true';
+}
+}
+ck3.onclick=function()
+{
+if(ck3.checked===true)
+{
+    ck3.disabled='true';
+}
+}
+reset.onclick=function()
+{
+    ck1.disabled=false;
+    ck1.checked=false;
+    
+    ck2.disabled=false;
+    ck2.checked=false;
+    
+    ck3.disabled=false;
+    ck3.checked=false;
+}
+    </script>
+</body>
+</html>
