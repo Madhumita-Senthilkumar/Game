@@ -40,7 +40,7 @@ h2{
 }
 .container label input{
     position:relative;
-    appearance: none; /* hides the check mark*/
+    appearance: none;         /* hides the check mark*/
     z-index:10; 
 }
 .container label i
